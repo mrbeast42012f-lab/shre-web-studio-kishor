@@ -5,899 +5,729 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Shre Web Studio | Premium Websites</title>
+<title>Shre Web Studio | Premium Website Design</title>
 
-<meta name="description" content="Shre Web Studio creates modern, professional and affordable websites for businesses, creators and brands.">
+<meta name="description" content="Shre Web Studio creates modern, mobile-friendly and affordable websites for businesses, creators, startups and personal brands.">
+
+<meta name="keywords" content="website design, web development, business website, portfolio website, landing page, Shre Web Studio">
+
+<meta name="author" content="Shre Web Studio">
+
+<meta name="robots" content="index, follow">
+
+<meta name="theme-color" content="#050505">
+
+<meta property="og:title" content="Shre Web Studio | Premium Websites">
+<meta property="og:description" content="Modern, professional and affordable websites for businesses, creators and brands.">
+<meta property="og:type" content="website">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 :root{
-    --accent:#00f5d4;
-    --bg:#050505;
-    --card:#0b0b0b;
-    --border:#202020;
-    --muted:#888;
+--accent:#00f5d4;
+--bg:#050505;
+--card:#0b0b0b;
+--border:#202020;
+--muted:#888;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:var(--bg);
-    color:#fff;
-    line-height:1.6;
-    overflow-x:hidden;
+font-family:Arial,Helvetica,sans-serif;
+background:var(--bg);
+color:#fff;
+line-height:1.6;
+overflow-x:hidden;
 }
 
 a{
-    text-decoration:none;
-    color:inherit;
+text-decoration:none;
+color:inherit;
 }
 
 .container{
-    width:92%;
-    max-width:1150px;
-    margin:auto;
+width:92%;
+max-width:1150px;
+margin:auto;
 }
 
-/* SCROLLBAR */
-
 ::-webkit-scrollbar{
-    width:7px;
+width:7px;
 }
 
 ::-webkit-scrollbar-track{
-    background:#050505;
+background:#050505;
 }
 
 ::-webkit-scrollbar-thumb{
-    background:#00f5d4;
-    border-radius:10px;
+background:var(--accent);
+border-radius:10px;
 }
 
-/* NAVBAR */
+/* NAV */
 
 nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(5,5,5,.82);
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(255,255,255,.08);
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(5,5,5,.85);
+backdrop-filter:blur(18px);
+border-bottom:1px solid #222;
 }
 
 .nav-inner{
-    min-height:70px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+min-height:70px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
-    font-size:22px;
-    font-weight:900;
-    color:var(--accent);
-    letter-spacing:.5px;
-    text-shadow:0 0 20px rgba(0,245,212,.25);
+font-size:21px;
+font-weight:900;
+color:var(--accent);
 }
 
 .nav-links{
-    display:flex;
-    gap:23px;
-    align-items:center;
+display:flex;
+gap:20px;
 }
 
 .nav-links a{
-    color:#ddd;
-    font-size:14px;
-    transition:.3s;
+color:#ccc;
+font-size:14px;
 }
 
 .nav-links a:hover{
-    color:var(--accent);
+color:var(--accent);
 }
 
 /* HERO */
 
 .hero{
-    min-height:90vh;
-    display:flex;
-    align-items:center;
-    text-align:center;
-    position:relative;
-    overflow:hidden;
+min-height:90vh;
+display:flex;
+align-items:center;
+text-align:center;
+position:relative;
+overflow:hidden;
 
-    background:
-    linear-gradient(
-        rgba(5,5,5,.58),
-        rgba(5,5,5,.88)
-    ),
-    url("1789221244819.jpg") center/cover no-repeat;
+background:
+linear-gradient(
+rgba(5,5,5,.58),
+rgba(5,5,5,.9)
+),
+url("1789221244819.jpg") center/cover no-repeat;
 
-    background-attachment:fixed;
-}
-
-.hero::before{
-    content:"";
-    position:absolute;
-    width:420px;
-    height:420px;
-    border-radius:50%;
-    background:rgba(0,245,212,.10);
-    filter:blur(100px);
-    top:-150px;
-    left:50%;
-    transform:translateX(-50%);
-    pointer-events:none;
-}
-
-.hero::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:
-    linear-gradient(
-        90deg,
-        transparent 0%,
-        rgba(0,245,212,.025) 50%,
-        transparent 100%
-    );
-    pointer-events:none;
+background-attachment:fixed;
 }
 
 .hero-content{
-    max-width:850px;
-    margin:auto;
-    position:relative;
-    z-index:2;
-    animation:heroUp .9s ease;
+max-width:850px;
+margin:auto;
+position:relative;
+z-index:2;
+animation:up .8s ease;
 }
 
-@keyframes heroUp{
-    from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+@keyframes up{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 .badge{
-    display:inline-block;
-    padding:9px 18px;
-    border:1px solid rgba(0,245,212,.7);
-    border-radius:50px;
-    color:var(--accent);
-    font-size:13px;
-    margin-bottom:22px;
-    background:rgba(0,0,0,.25);
-    backdrop-filter:blur(8px);
-    box-shadow:
-        0 0 25px rgba(0,245,212,.08),
-        inset 0 0 15px rgba(0,245,212,.03);
+display:inline-block;
+padding:9px 18px;
+border:1px solid var(--accent);
+border-radius:50px;
+color:var(--accent);
+font-size:12px;
+margin-bottom:20px;
+background:#0005;
 }
 
 .hero h1{
-    font-size:clamp(42px,8vw,80px);
-    line-height:1.02;
-    margin-bottom:22px;
-    font-weight:900;
-    letter-spacing:-2px;
-    text-shadow:0 5px 30px rgba(0,0,0,.7);
+font-size:clamp(42px,8vw,80px);
+line-height:1.02;
+font-weight:900;
+margin-bottom:20px;
 }
 
 .hero h1 span{
-    color:var(--accent);
-    text-shadow:0 0 30px rgba(0,245,212,.25);
+color:var(--accent);
 }
 
 .hero p{
-    color:#ddd;
-    max-width:680px;
-    margin:0 auto 32px;
-    font-size:17px;
-    text-shadow:0 3px 15px rgba(0,0,0,.7);
+color:#ddd;
+max-width:680px;
+margin:auto auto 30px;
 }
 
 .buttons{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
 }
 
 .btn{
-    padding:14px 25px;
-    border-radius:11px;
-    font-weight:bold;
-    display:inline-block;
-    transition:.3s;
+display:inline-block;
+padding:14px 24px;
+border-radius:11px;
+font-weight:bold;
+transition:.3s;
 }
 
 .btn-primary{
-    background:var(--accent);
-    color:#000;
-    box-shadow:0 0 25px rgba(0,245,212,.12);
+background:var(--accent);
+color:#000;
 }
 
 .btn-primary:hover{
-    transform:translateY(-4px);
-    box-shadow:0 12px 35px rgba(0,245,212,.3);
+transform:translateY(-4px);
+box-shadow:0 10px 30px #00f5d455;
 }
 
 .btn-outline{
-    border:1px solid #555;
-    color:#fff;
-    background:rgba(0,0,0,.3);
-    backdrop-filter:blur(8px);
+border:1px solid #555;
+background:#0005;
 }
 
 .btn-outline:hover{
-    border-color:var(--accent);
-    color:var(--accent);
-    transform:translateY(-4px);
+border-color:var(--accent);
+color:var(--accent);
+}
+
+/* COMMON */
+
+section{
+padding:90px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:45px;
+}
+
+.section-title h2{
+font-size:38px;
+margin-bottom:8px;
+}
+
+.section-title p{
+color:var(--muted);
 }
 
 /* STATS */
 
 .stats{
-    padding:45px 0;
-    border-top:1px solid #151515;
-    border-bottom:1px solid #151515;
-    background:#060606;
+padding:40px 0;
+background:#070707;
+border-top:1px solid #151515;
+border-bottom:1px solid #151515;
 }
 
 .stats-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-    text-align:center;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+text-align:center;
 }
 
 .stat{
-    padding:15px;
-    border-right:1px solid #1b1b1b;
+border-right:1px solid #222;
 }
 
 .stat:last-child{
-    border-right:none;
+border:0;
 }
 
 .stat h3{
-    color:var(--accent);
-    font-size:38px;
-    font-weight:900;
-    text-shadow:0 0 20px rgba(0,245,212,.15);
+font-size:36px;
+color:var(--accent);
 }
 
 .stat p{
-    color:#888;
-}
-
-/* GENERAL SECTION */
-
-section{
-    padding:95px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:52px;
-}
-
-.section-title h2{
-    font-size:40px;
-    margin-bottom:10px;
-    font-weight:900;
-}
-
-.section-title p{
-    color:#888;
+color:#888;
 }
 
 /* CARDS */
 
 .services-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
 }
 
 .card{
-    background:
-        linear-gradient(145deg,rgba(20,20,20,.95),rgba(8,8,8,.95));
-    border:1px solid #1c1c1c;
-    border-radius:20px;
-    padding:30px;
-    transition:.35s;
-    position:relative;
-    overflow:hidden;
-}
-
-.card::before{
-    content:"";
-    position:absolute;
-    width:120px;
-    height:120px;
-    background:rgba(0,245,212,.06);
-    border-radius:50%;
-    filter:blur(45px);
-    top:-60px;
-    right:-60px;
-    pointer-events:none;
+padding:28px;
+border:1px solid #202020;
+border-radius:20px;
+background:linear-gradient(145deg,#141414,#080808);
+transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
-    border-color:rgba(0,245,212,.65);
-    box-shadow:
-        0 15px 45px rgba(0,0,0,.4),
-        0 0 25px rgba(0,245,212,.05);
+transform:translateY(-7px);
+border-color:var(--accent);
 }
 
 .icon{
-    font-size:35px;
-    margin-bottom:15px;
-}
-
-.card h3{
-    margin-bottom:10px;
+font-size:34px;
+margin-bottom:12px;
 }
 
 .card p{
-    color:#888;
-    font-size:14px;
+color:#888;
+font-size:14px;
 }
 
-/* PORTFOLIO */
+.card h3{
+margin-bottom:8px;
+}
 
 .portfolio-section{
-    background:#080808;
+background:#080808;
 }
 
 .demo-tag{
-    display:inline-block;
-    margin-top:12px;
-    padding:5px 10px;
-    border-radius:20px;
-    font-size:11px;
-    color:var(--accent);
-    border:1px solid #1c5c55;
-    background:rgba(0,245,212,.03);
+display:inline-block;
+margin-top:12px;
+padding:5px 10px;
+border:1px solid #195c54;
+border-radius:20px;
+font-size:11px;
+color:var(--accent);
+}
+
+.demo-btn{
+margin-top:18px;
 }
 
 /* PROCESS */
 
 .process-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
 }
 
 .step{
-    text-align:center;
-    padding:30px 20px;
-    border:1px solid #151515;
-    border-radius:18px;
-    background:#090909;
-    transition:.3s;
-}
-
-.step:hover{
-    transform:translateY(-6px);
-    border-color:#00f5d4;
+text-align:center;
+padding:28px 18px;
+border:1px solid #202020;
+border-radius:18px;
+background:#090909;
 }
 
 .step-number{
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    border:1px solid var(--accent);
-    color:var(--accent);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:0 auto 17px;
-    font-weight:bold;
-    box-shadow:0 0 25px rgba(0,245,212,.08);
+width:55px;
+height:55px;
+border:1px solid var(--accent);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:auto auto 15px;
+color:var(--accent);
+font-weight:bold;
 }
 
 .step p{
-    color:#888;
-    font-size:14px;
-    margin-top:8px;
+color:#888;
+font-size:14px;
 }
 
 /* PRICING */
 
 .pricing-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
 }
 
 .price-card{
-    position:relative;
-    background:
-        linear-gradient(145deg,#0d0d0d,#080808);
-    border:1px solid #222;
-    border-radius:22px;
-    padding:38px 27px;
-    transition:.35s;
-}
-
-.price-card:hover{
-    transform:translateY(-8px);
-    border-color:var(--accent);
-    box-shadow:0 15px 45px rgba(0,0,0,.4);
+position:relative;
+padding:35px 27px;
+border:1px solid #222;
+border-radius:22px;
+background:#0b0b0b;
 }
 
 .price-card.popular{
-    border-color:var(--accent);
-    transform:scale(1.035);
-    box-shadow:
-        0 15px 50px rgba(0,245,212,.08),
-        inset 0 0 25px rgba(0,245,212,.025);
-}
-
-.price-card.popular:hover{
-    transform:scale(1.05) translateY(-6px);
+border-color:var(--accent);
+transform:scale(1.03);
 }
 
 .popular-label{
-    position:absolute;
-    top:-14px;
-    left:50%;
-    transform:translateX(-50%);
-    background:var(--accent);
-    color:#000;
-    padding:6px 16px;
-    border-radius:30px;
-    font-size:12px;
-    font-weight:bold;
-    white-space:nowrap;
-    box-shadow:0 5px 20px rgba(0,245,212,.18);
+position:absolute;
+top:-13px;
+left:50%;
+transform:translateX(-50%);
+background:var(--accent);
+color:#000;
+padding:5px 15px;
+border-radius:20px;
+font-size:11px;
+font-weight:bold;
+white-space:nowrap;
 }
 
 .price{
-    font-size:43px;
-    font-weight:900;
-    margin:15px 0;
-    color:var(--accent);
+font-size:42px;
+font-weight:900;
+color:var(--accent);
+margin:12px 0;
 }
 
 .price span{
-    font-size:14px;
-    color:#777;
+font-size:13px;
+color:#777;
 }
 
 .features{
-    list-style:none;
-    margin:25px 0;
+list-style:none;
+margin:20px 0;
 }
 
 .features li{
-    padding:8px 0;
-    color:#bbb;
-    font-size:14px;
+padding:7px 0;
+color:#bbb;
+font-size:14px;
 }
 
-/* WHY US */
+/* WHY */
 
 .why-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
 }
 
 .why-item{
-    padding:27px;
-    background:
-        linear-gradient(145deg,#0d0d0d,#090909);
-    border:1px solid #1c1c1c;
-    border-radius:18px;
-    transition:.3s;
+padding:27px;
+border:1px solid #202020;
+border-radius:18px;
+background:#0b0b0b;
 }
 
 .why-item:hover{
-    border-color:var(--accent);
-    transform:translateY(-5px);
-}
-
-.why-item h3{
-    margin-bottom:8px;
+border-color:var(--accent);
 }
 
 .why-item p{
-    color:#888;
-    font-size:14px;
+color:#888;
+font-size:14px;
+}
+
+/* TESTIMONIAL */
+
+.testimonials{
+background:#070707;
+}
+
+.review-card{
+text-align:center;
+}
+
+.review-stars{
+color:var(--accent);
+margin-bottom:12px;
 }
 
 /* ORDER */
 
 .order-section{
-    background:#080808;
+background:#080808;
 }
 
 .order-box{
-    max-width:750px;
-    margin:auto;
-    background:
-        linear-gradient(145deg,#101010,#090909);
-    border:1px solid #222;
-    border-radius:22px;
-    padding:38px;
-    box-shadow:0 20px 60px rgba(0,0,0,.3);
+max-width:750px;
+margin:auto;
+padding:35px;
+border:1px solid #222;
+border-radius:22px;
+background:#0d0d0d;
 }
 
 .form-group{
-    margin-bottom:18px;
+margin-bottom:17px;
 }
 
 .form-group label{
-    display:block;
-    margin-bottom:7px;
-    font-size:14px;
-    color:#ccc;
+display:block;
+font-size:14px;
+color:#ccc;
+margin-bottom:6px;
 }
 
 .form-control{
-    width:100%;
-    padding:14px;
-    background:#050505;
-    color:#fff;
-    border:1px solid #292929;
-    border-radius:10px;
-    outline:none;
-    font-size:14px;
-    transition:.3s;
+width:100%;
+padding:14px;
+border-radius:10px;
+border:1px solid #292929;
+background:#050505;
+color:#fff;
+outline:none;
 }
 
 .form-control:focus{
-    border-color:var(--accent);
-    box-shadow:0 0 0 2px rgba(0,245,212,.05);
+border-color:var(--accent);
 }
 
 textarea.form-control{
-    min-height:120px;
-    resize:vertical;
-}
-
-select.form-control{
-    appearance:auto;
+min-height:120px;
+resize:vertical;
 }
 
 .submit-btn{
-    width:100%;
-    border:none;
-    cursor:pointer;
-    padding:16px;
-    border-radius:11px;
-    background:var(--accent);
-    color:#000;
-    font-weight:bold;
-    font-size:15px;
-    transition:.3s;
+width:100%;
+padding:15px;
+border:0;
+border-radius:11px;
+background:var(--accent);
+color:#000;
+font-weight:bold;
+cursor:pointer;
 }
 
-.submit-btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 10px 35px rgba(0,245,212,.25);
+/* PAYMENT */
+
+.payment-section{
+background:#050505;
+}
+
+.payment-box{
+max-width:700px;
+margin:auto;
+text-align:center;
+padding:35px;
+border:1px solid #222;
+border-radius:22px;
+background:#0b0b0b;
+}
+
+.payment-note{
+color:#999;
+margin:15px 0 25px;
+}
+
+.payment-safe{
+color:var(--accent);
+font-size:13px;
 }
 
 /* FAQ */
 
 .faq{
-    max-width:800px;
-    margin:auto;
+max-width:800px;
+margin:auto;
 }
 
 details{
-    background:#0b0b0b;
-    border:1px solid #1c1c1c;
-    margin-bottom:12px;
-    border-radius:14px;
-    padding:19px 20px;
-    transition:.3s;
-}
-
-details:hover{
-    border-color:var(--accent);
+padding:18px;
+margin-bottom:12px;
+border:1px solid #202020;
+border-radius:14px;
+background:#0b0b0b;
 }
 
 summary{
-    cursor:pointer;
-    font-weight:bold;
+cursor:pointer;
+font-weight:bold;
 }
 
 details p{
-    color:#888;
-    margin-top:12px;
-    font-size:14px;
+color:#888;
+margin-top:10px;
+font-size:14px;
 }
 
-/* TRUST */
+/* LEGAL */
 
-.trust-section{
-    background:#080808;
+.legal{
+background:#080808;
 }
 
-.trust-card{
-    text-align:center;
+.legal-box{
+max-width:850px;
+margin:auto;
+padding:30px;
+border:1px solid #222;
+border-radius:20px;
+background:#0c0c0c;
 }
 
-/* TESTIMONIALS */
-
-.testimonials{
-    background:#050505;
+.legal-box h3{
+margin:20px 0 8px;
+color:var(--accent);
 }
 
-.review-card{
-    text-align:center;
-}
-
-.review-stars{
-    color:#00f5d4;
-    font-size:18px;
-    margin-bottom:15px;
-}
-
-.review-card p{
-    font-size:15px;
-    color:#aaa;
-    font-style:italic;
-    margin-bottom:15px;
-}
-
-.review-name{
-    color:#fff;
-    font-weight:bold;
-}
-
-/* CONTACT */
-
-.contact-card{
-    text-align:left;
+.legal-box p{
+color:#999;
+font-size:14px;
 }
 
 /* CTA */
 
 .cta{
-    text-align:center;
-    background:
-        radial-gradient(circle at 50% 40%,rgba(0,245,212,.16),transparent 55%),
-        #050505;
-    border-top:1px solid #111;
-    border-bottom:1px solid #111;
-}
-
-.cta-badge{
-    display:inline-block;
-    color:var(--accent);
-    border:1px solid var(--accent);
-    padding:7px 14px;
-    border-radius:50px;
-    font-size:12px;
-    font-weight:bold;
-    margin-bottom:18px;
+text-align:center;
+background:radial-gradient(circle,#003d35,#050505 60%);
 }
 
 .cta h2{
-    font-size:44px;
-    margin-bottom:15px;
-    font-weight:900;
+font-size:43px;
+margin-bottom:12px;
 }
 
 .cta p{
-    color:#888;
-    margin-bottom:25px;
-}
-
-.cta-note{
-    color:#666;
-    font-size:13px;
-    margin-top:18px;
+color:#888;
+margin-bottom:25px;
 }
 
 /* FOOTER */
 
 footer{
-    padding:48px 0;
-    border-top:1px solid #1b1b1b;
-    text-align:center;
+padding:45px 0;
+text-align:center;
+border-top:1px solid #222;
 }
 
 .footer-logo{
-    font-size:23px;
-    font-weight:900;
-    color:var(--accent);
-    margin-bottom:10px;
+font-size:22px;
+font-weight:bold;
+color:var(--accent);
 }
 
 footer p{
-    color:#666;
-    font-size:13px;
+color:#666;
+font-size:13px;
+margin-top:8px;
 }
 
 .footer-links{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    margin:20px 0;
-    flex-wrap:wrap;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin:18px 0;
 }
 
 .footer-links a{
-    color:#888;
-    font-size:13px;
+color:#888;
+font-size:13px;
 }
 
 .footer-links a:hover{
-    color:var(--accent);
+color:var(--accent);
 }
 
 /* WHATSAPP */
 
 .whatsapp{
-    position:fixed;
-    right:18px;
-    bottom:18px;
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    background:#25D366;
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:28px;
-    z-index:999;
-    box-shadow:0 5px 30px rgba(0,0,0,.45);
-    transition:.3s;
-    animation:waPulse 2.5s infinite;
-}
-
-.whatsapp:hover{
-    transform:scale(1.1);
-}
-
-@keyframes waPulse{
-    0%,100%{
-        box-shadow:0 5px 30px rgba(0,0,0,.45);
-    }
-    50%{
-        box-shadow:
-        0 5px 30px rgba(0,0,0,.45),
-        0 0 0 8px rgba(37,211,102,.08);
-    }
+position:fixed;
+right:18px;
+bottom:18px;
+width:58px;
+height:58px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:27px;
+z-index:999;
+box-shadow:0 5px 30px #0008;
 }
 
 /* MOBILE */
 
 @media(max-width:800px){
 
-    .nav-inner{
-        padding:15px 0;
-    }
+.nav-links{
+display:none;
+}
 
-    .nav-links{
-        display:none;
-    }
+.hero{
+min-height:82vh;
+background-attachment:scroll;
+}
 
-    .logo{
-        font-size:19px;
-    }
+.hero h1{
+font-size:45px;
+}
 
-    .hero{
-        min-height:82vh;
-        padding:70px 0;
-        background-attachment:scroll;
-    }
+.services-grid,
+.pricing-grid,
+.process-grid,
+.why-grid{
+grid-template-columns:1fr;
+}
 
-    .hero h1{
-        font-size:45px;
-        letter-spacing:-1px;
-    }
+.stats-grid{
+grid-template-columns:1fr;
+}
 
-    .hero p{
-        font-size:15px;
-    }
+.stat{
+border-right:0;
+border-bottom:1px solid #222;
+padding:15px;
+}
 
-    .stats-grid{
-        grid-template-columns:1fr;
-    }
+.stat:last-child{
+border-bottom:0;
+}
 
-    .stat{
-        border-right:none;
-        border-bottom:1px solid #151515;
-    }
+.price-card.popular{
+transform:none;
+}
 
-    .stat:last-child{
-        border-bottom:none;
-    }
+section{
+padding:70px 0;
+}
 
-    .services-grid,
-    .pricing-grid,
-    .process-grid,
-    .why-grid{
-        grid-template-columns:1fr;
-    }
+.order-box{
+padding:22px;
+}
 
-    .price-card.popular{
-        transform:none;
-        margin:5px 0;
-    }
+.cta h2{
+font-size:32px;
+}
 
-    .price-card.popular:hover{
-        transform:translateY(-7px);
-    }
-
-    section{
-        padding:70px 0;
-    }
-
-    .section-title{
-        margin-bottom:40px;
-    }
-
-    .section-title h2{
-        font-size:32px;
-    }
-
-    .order-box{
-        padding:22px;
-    }
-
-    .cta h2{
-        font-size:33px;
-    }
-
-    .cta p{
-        font-size:14px;
-    }
-
-    .buttons .btn{
-        width:100%;
-        text-align:center;
-    }
+.buttons .btn{
+width:100%;
+text-align:center;
+}
 
 }
 
-/* SMALL MOBILE */
-
 @media(max-width:420px){
 
-    .hero h1{
-        font-size:38px;
-    }
+.hero h1{
+font-size:38px;
+}
 
-    .badge{
-        font-size:11px;
-    }
+.logo{
+font-size:18px;
+}
 
-    .price{
-        font-size:36px;
-    }
-
-    .order-box{
-        padding:18px;
-    }
-
-    .whatsapp{
-        width:53px;
-        height:53px;
-        font-size:25px;
-        right:15px;
-        bottom:15px;
-    }
+.whatsapp{
+width:53px;
+height:53px;
+right:15px;
+bottom:15px;
+}
 
 }
 
@@ -909,15 +739,11 @@ footer p{
 <!-- NAVBAR -->
 
 <nav>
-
 <div class="container nav-inner">
 
-<div class="logo">
-SHRE WEB STUDIO
-</div>
+<div class="logo">SHRE WEB STUDIO</div>
 
 <div class="nav-links">
-
 <a href="#home">Home</a>
 <a href="#services">Services</a>
 <a href="#portfolio">Portfolio</a>
@@ -926,11 +752,9 @@ SHRE WEB STUDIO
 <a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
 <a href="#order">Order</a>
-
 </div>
 
 </div>
-
 </nav>
 
 
@@ -951,7 +775,7 @@ Your Growth.
 </h1>
 
 <p>
-We create modern, professional and mobile-friendly websites
+Modern, professional and mobile-friendly websites
 for businesses, creators, startups and personal brands.
 </p>
 
@@ -1005,13 +829,8 @@ View Our Work
 <div class="container">
 
 <div class="section-title">
-
 <h2>What We Build</h2>
-
-<p>
-Everything you need to build your online presence.
-</p>
-
+<p>Everything you need to build your online presence.</p>
 </div>
 
 <div class="services-grid">
@@ -1019,55 +838,37 @@ Everything you need to build your online presence.
 <div class="card">
 <div class="icon">🌐</div>
 <h3>Business Website</h3>
-<p>
-Professional websites for shops, local businesses,
-services and companies.
-</p>
+<p>Professional websites for shops, services and companies.</p>
 </div>
 
 <div class="card">
 <div class="icon">🎨</div>
 <h3>Landing Page</h3>
-<p>
-High-converting landing pages for products,
-campaigns and promotions.
-</p>
+<p>High-converting pages for products and promotions.</p>
 </div>
 
 <div class="card">
 <div class="icon">👤</div>
 <h3>Personal Website</h3>
-<p>
-Modern portfolio and personal websites for creators,
-freelancers and professionals.
-</p>
+<p>Modern portfolio websites for professionals and creators.</p>
 </div>
 
 <div class="card">
 <div class="icon">🛒</div>
 <h3>Online Store</h3>
-<p>
-Showcase your products online and make your
-business easier to discover.
-</p>
+<p>Showcase your products and grow your online presence.</p>
 </div>
 
 <div class="card">
 <div class="icon">📱</div>
 <h3>Responsive Design</h3>
-<p>
-Your website will look great on mobile, tablet
-and desktop devices.
-</p>
+<p>Designed for mobile, tablet and desktop.</p>
 </div>
 
 <div class="card">
 <div class="icon">⚡</div>
 <h3>Fast Website</h3>
-<p>
-Clean and lightweight websites designed for
-a smooth browsing experience.
-</p>
+<p>Clean and lightweight websites for smooth browsing.</p>
 </div>
 
 </div>
@@ -1084,182 +885,82 @@ a smooth browsing experience.
 <div class="container">
 
 <div class="section-title">
-
 <h2>Our Demo Websites</h2>
-
-<p>
-Choose a style for your business or brand.
-</p>
-
+<p>Choose a website style for your business or brand.</p>
 </div>
 
 <div class="services-grid">
 
 <div class="card">
-
 <div class="icon">🍔</div>
-
 <h3>Restaurant Website</h3>
-
-<p>
-Modern website for restaurants, cafes and food businesses.
-</p>
-
-<span class="demo-tag">
-FOOD & RESTAURANT
-</span>
-
+<p>Modern website for restaurants and cafes.</p>
+<span class="demo-tag">FOOD & RESTAURANT</span>
 <br>
-
-<a href="#order"
-class="btn btn-outline"
-style="margin-top:18px;"
-onclick="selectPackage('Professional ₹1999')">
-
+<a href="#order" class="btn btn-outline demo-btn"
+onclick="selectPackage('Professional ₹1999');selectType('Restaurant Website')">
 Build This
-
 </a>
-
 </div>
 
-
 <div class="card">
-
 <div class="icon">🛍️</div>
-
 <h3>Business Website</h3>
-
-<p>
-Professional website for shops, services and local businesses.
-</p>
-
-<span class="demo-tag">
-BUSINESS
-</span>
-
+<p>Professional website for shops and local businesses.</p>
+<span class="demo-tag">BUSINESS</span>
 <br>
-
-<a href="#order"
-class="btn btn-outline"
-style="margin-top:18px;"
-onclick="selectPackage('Professional ₹1999')">
-
+<a href="#order" class="btn btn-outline demo-btn"
+onclick="selectPackage('Professional ₹1999');selectType('Business Website')">
 Build This
-
 </a>
-
 </div>
 
-
 <div class="card">
-
 <div class="icon">👨‍💻</div>
-
 <h3>Portfolio Website</h3>
-
-<p>
-Clean personal portfolio for creators, freelancers and professionals.
-</p>
-
-<span class="demo-tag">
-PORTFOLIO
-</span>
-
+<p>Clean portfolio for creators and freelancers.</p>
+<span class="demo-tag">PORTFOLIO</span>
 <br>
-
-<a href="#order"
-class="btn btn-outline"
-style="margin-top:18px;"
-onclick="selectPackage('Basic ₹999')">
-
+<a href="#order" class="btn btn-outline demo-btn"
+onclick="selectPackage('Basic ₹999');selectType('Portfolio Website')">
 Build This
-
 </a>
-
 </div>
 
-
 <div class="card">
-
 <div class="icon">🏋️</div>
-
 <h3>Gym Website</h3>
-
-<p>
-Powerful landing page for gyms, trainers and fitness brands.
-</p>
-
-<span class="demo-tag">
-FITNESS
-</span>
-
+<p>Powerful website for gyms and fitness brands.</p>
+<span class="demo-tag">FITNESS</span>
 <br>
-
-<a href="#order"
-class="btn btn-outline"
-style="margin-top:18px;"
-onclick="selectPackage('Professional ₹1999')">
-
+<a href="#order" class="btn btn-outline demo-btn"
+onclick="selectPackage('Professional ₹1999');selectType('Gym Website')">
 Build This
-
 </a>
-
 </div>
 
-
 <div class="card">
-
 <div class="icon">📸</div>
-
 <h3>Creator Website</h3>
-
-<p>
-Personal website for YouTubers, Instagram creators and influencers.
-</p>
-
-<span class="demo-tag">
-CREATOR
-</span>
-
+<p>Personal website for YouTubers and creators.</p>
+<span class="demo-tag">CREATOR</span>
 <br>
-
-<a href="#order"
-class="btn btn-outline"
-style="margin-top:18px;"
-onclick="selectPackage('Professional ₹1999')">
-
+<a href="#order" class="btn btn-outline demo-btn"
+onclick="selectPackage('Professional ₹1999');selectType('Creator Website')">
 Build This
-
 </a>
-
 </div>
 
-
 <div class="card">
-
 <div class="icon">🏠</div>
-
 <h3>Real Estate Website</h3>
-
-<p>
-Modern property showcase website for real estate businesses.
-</p>
-
-<span class="demo-tag">
-REAL ESTATE
-</span>
-
+<p>Property showcase website for real estate businesses.</p>
+<span class="demo-tag">REAL ESTATE</span>
 <br>
-
-<a href="#order"
-class="btn btn-outline"
-style="margin-top:18px;"
-onclick="selectPackage('Premium ₹2999')">
-
+<a href="#order" class="btn btn-outline demo-btn"
+onclick="selectPackage('Premium ₹2999');selectType('Real Estate Website')">
 Build This
-
 </a>
-
 </div>
 
 </div>
@@ -1276,66 +977,34 @@ Build This
 <div class="container">
 
 <div class="section-title">
-
 <h2>How It Works</h2>
-
-<p>
-Simple process from idea to website.
-</p>
-
+<p>Simple process from idea to website.</p>
 </div>
 
 <div class="process-grid">
 
 <div class="step">
-
 <div class="step-number">01</div>
-
 <h3>Tell Us</h3>
-
-<p>
-Send us your website idea and requirements.
-</p>
-
+<p>Send your website idea and requirements.</p>
 </div>
 
-
 <div class="step">
-
 <div class="step-number">02</div>
-
 <h3>We Design</h3>
-
-<p>
-We create a modern design based on your needs.
-</p>
-
+<p>We create a modern design for your brand.</p>
 </div>
 
-
 <div class="step">
-
 <div class="step-number">03</div>
-
 <h3>We Build</h3>
-
-<p>
-Your website is developed and optimized.
-</p>
-
+<p>Your website is developed and optimized.</p>
 </div>
 
-
 <div class="step">
-
 <div class="step-number">04</div>
-
 <h3>Go Live</h3>
-
-<p>
-Your website is ready to share with customers.
-</p>
-
+<p>Your website is ready to share.</p>
 </div>
 
 </div>
@@ -1352,13 +1021,8 @@ Your website is ready to share with customers.
 <div class="container">
 
 <div class="section-title">
-
 <h2>Simple Pricing</h2>
-
-<p>
-Choose the package that fits your business.
-</p>
-
+<p>Choose the package that fits your business.</p>
 </div>
 
 <div class="pricing-grid">
@@ -1372,21 +1036,17 @@ Choose the package that fits your business.
 </div>
 
 <ul class="features">
-
 <li>✓ 1 Page Website</li>
 <li>✓ Mobile Responsive</li>
 <li>✓ Modern Design</li>
 <li>✓ WhatsApp Button</li>
 <li>✓ Basic SEO</li>
-
 </ul>
 
 <a href="#order"
 class="btn btn-outline"
 onclick="selectPackage('Basic ₹999')">
-
 Choose Basic
-
 </a>
 
 </div>
@@ -1405,22 +1065,18 @@ MOST POPULAR
 </div>
 
 <ul class="features">
-
 <li>✓ Up to 5 Sections</li>
 <li>✓ Premium Design</li>
 <li>✓ Mobile Responsive</li>
 <li>✓ WhatsApp Integration</li>
 <li>✓ Contact Form</li>
 <li>✓ Basic SEO</li>
-
 </ul>
 
 <a href="#order"
 class="btn btn-primary"
 onclick="selectPackage('Professional ₹1999')">
-
 Choose Professional
-
 </a>
 
 </div>
@@ -1435,22 +1091,18 @@ Choose Professional
 </div>
 
 <ul class="features">
-
 <li>✓ Multi-Section Website</li>
 <li>✓ Premium UI</li>
 <li>✓ Advanced Responsive Design</li>
 <li>✓ WhatsApp Integration</li>
 <li>✓ Order/Contact Form</li>
 <li>✓ SEO Ready</li>
-
 </ul>
 
 <a href="#order"
 class="btn btn-outline"
 onclick="selectPackage('Premium ₹2999')">
-
 Choose Premium
-
 </a>
 
 </div>
@@ -1469,62 +1121,30 @@ Choose Premium
 <div class="container">
 
 <div class="section-title">
-
 <h2>Why Choose Us?</h2>
-
-<p>
-Built for modern businesses and creators.
-</p>
-
+<p>Built for modern businesses and creators.</p>
 </div>
 
 <div class="why-grid">
 
 <div class="why-item">
-
 <h3>⚡ Fast & Modern</h3>
-
-<p>
-Clean layouts and modern designs that help your
-brand look professional.
-</p>
-
+<p>Clean layouts and modern designs for a professional brand.</p>
 </div>
 
-
 <div class="why-item">
-
 <h3>📱 Mobile First</h3>
-
-<p>
-Most customers use mobile, so every website is
-built to work smoothly on phones.
-</p>
-
+<p>Your website works smoothly on phones, tablets and desktops.</p>
 </div>
 
-
 <div class="why-item">
-
 <h3>💰 Affordable</h3>
-
-<p>
-Professional websites without an unnecessarily
-high development cost.
-</p>
-
+<p>Professional websites at accessible project prices.</p>
 </div>
 
-
 <div class="why-item">
-
 <h3>🤝 Direct Support</h3>
-
-<p>
-Tell us what you need and we'll help you choose
-the right website solution.
-</p>
-
+<p>Discuss your requirements directly through WhatsApp.</p>
 </div>
 
 </div>
@@ -1534,72 +1154,35 @@ the right website solution.
 </section>
 
 
-<!-- TESTIMONIALS -->
+<!-- TESTIMONIAL -->
 
 <section class="testimonials">
 
 <div class="container">
 
 <div class="section-title">
-
 <h2>What Clients Want</h2>
-
-<p>
-A professional website should make your brand easier to trust.
-</p>
-
+<p>Professional websites should create trust and clarity.</p>
 </div>
 
 <div class="services-grid">
 
 <div class="card review-card">
-
-<div class="review-stars">
-★★★★★
+<div class="review-stars">★★★★★</div>
+<p>“Clean design and professional presentation on mobile.”</p>
+<strong>Business Owner</strong>
 </div>
-
-<p>
-“Clean design, easy to use and looks professional on mobile.”
-</p>
-
-<div class="review-name">
-Business Owner
-</div>
-
-</div>
-
 
 <div class="card review-card">
-
-<div class="review-stars">
-★★★★★
+<div class="review-stars">★★★★★</div>
+<p>“A modern website makes it easier to showcase your work.”</p>
+<strong>Creator / Freelancer</strong>
 </div>
-
-<p>
-“Perfect for showcasing a personal brand and services online.”
-</p>
-
-<div class="review-name">
-Creator / Freelancer
-</div>
-
-</div>
-
 
 <div class="card review-card">
-
-<div class="review-stars">
-★★★★★
-</div>
-
-<p>
-“A modern online presence can make a strong first impression.”
-</p>
-
-<div class="review-name">
-Startup / Brand
-</div>
-
+<div class="review-stars">★★★★★</div>
+<p>“A strong online presence can create a great first impression.”</p>
+<strong>Brand / Startup</strong>
 </div>
 
 </div>
@@ -1609,20 +1192,15 @@ Startup / Brand
 </section>
 
 
-<!-- ORDER FORM -->
+<!-- ORDER -->
 
 <section class="order-section" id="order">
 
 <div class="container">
 
 <div class="section-title">
-
-<h2>Tell Us About Your Website</h2>
-
-<p>
-Tell us your idea and we'll help you turn it into a website.
-</p>
-
+<h2>Start Your Project</h2>
+<p>Tell us what website you want.</p>
 </div>
 
 <div class="order-box">
@@ -1630,44 +1208,29 @@ Tell us your idea and we'll help you turn it into a website.
 <form onsubmit="sendOrder(event)">
 
 <div class="form-group">
-
 <label>Your Name</label>
-
-<input
-class="form-control"
+<input class="form-control"
 id="customerName"
 type="text"
 placeholder="Enter your name"
 required>
-
 </div>
 
-
 <div class="form-group">
-
 <label>Business / Brand Name</label>
-
-<input
-class="form-control"
+<input class="form-control"
 id="businessName"
 type="text"
 placeholder="Enter business or brand name"
 required>
-
 </div>
 
-
 <div class="form-group">
-
 <label>Website Type</label>
 
-<select
-class="form-control"
-id="websiteType"
-required>
+<select class="form-control" id="websiteType" required>
 
 <option value="">Select website type</option>
-
 <option>Business Website</option>
 <option>Landing Page</option>
 <option>Portfolio Website</option>
@@ -1680,52 +1243,77 @@ required>
 <option>Other</option>
 
 </select>
-
 </div>
 
-
 <div class="form-group">
-
 <label>Choose Package</label>
 
-<select
-class="form-control"
-id="package"
-required>
+<select class="form-control" id="package" required>
 
 <option value="">Select package</option>
-
 <option>Basic ₹999</option>
 <option>Professional ₹1999</option>
 <option>Premium ₹2999</option>
 
 </select>
-
 </div>
 
-
 <div class="form-group">
-
 <label>Your Requirement</label>
 
-<textarea
-class="form-control"
+<textarea class="form-control"
 id="requirement"
-placeholder="Tell us about the website you want..."
+placeholder="Tell us about your website..."
 required></textarea>
 
 </div>
 
-
-<button
-type="submit"
-class="submit-btn">
-
+<button type="submit" class="submit-btn">
 💬 Send Project Request
-
 </button>
 
 </form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PAYMENT -->
+
+<section class="payment-section">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Project Payment</h2>
+<p>Simple and transparent process.</p>
+</div>
+
+<div class="payment-box">
+
+<div class="icon">💳</div>
+
+<h3>Payment After Project Confirmation</h3>
+
+<p class="payment-note">
+First discuss your project and requirements with us.
+Payment details will be shared after the project is confirmed.
+</p>
+
+<p class="payment-safe">
+🔒 Clear pricing • Direct communication • No hidden charges
+</p>
+
+<br>
+
+<a href="https://wa.me/917501911715"
+target="_blank"
+class="btn btn-primary">
+Discuss Payment
+</a>
 
 </div>
 
@@ -1741,152 +1329,36 @@ class="submit-btn">
 <div class="container">
 
 <div class="section-title">
-
 <h2>Frequently Asked Questions</h2>
-
-<p>
-Some common questions.
-</p>
-
+<p>Everything you need to know before ordering.</p>
 </div>
 
 <div class="faq">
 
 <details>
-
-<summary>
-How can I order a website?
-</summary>
-
-<p>
-Fill out the project form above and send your requirements
-through WhatsApp.
-</p>
-
+<summary>How can I order a website?</summary>
+<p>Fill out the project form and send your requirements through WhatsApp.</p>
 </details>
-
 
 <details>
-
-<summary>
-Can you make mobile-friendly websites?
-</summary>
-
-<p>
-Yes. Our websites are designed to work on mobile,
-tablet and desktop.
-</p>
-
+<summary>Are websites mobile friendly?</summary>
+<p>Yes. Websites are designed for mobile, tablet and desktop screens.</p>
 </details>
-
 
 <details>
-
-<summary>
-Can I request changes?
-</summary>
-
-<p>
-Yes. You can discuss the required changes with us before
-final delivery.
-</p>
-
+<summary>Can I request changes?</summary>
+<p>Yes. Requirements and changes can be discussed before final delivery.</p>
 </details>
-
 
 <details>
-
-<summary>
-Do you provide WhatsApp integration?
-</summary>
-
-<p>
-Yes. WhatsApp contact and project enquiry buttons can
-be integrated into the website.
-</p>
-
+<summary>Do you provide WhatsApp integration?</summary>
+<p>Yes. WhatsApp buttons and enquiry systems can be integrated.</p>
 </details>
-
 
 <details>
-
-<summary>
-How do I choose the right package?
-</summary>
-
-<p>
-If you are not sure, send us your requirements through
-WhatsApp and we can help you choose the suitable package.
-</p>
-
+<summary>How does payment work?</summary>
+<p>First discuss and confirm the project. Payment details are then shared directly.</p>
 </details>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- TRUST -->
-
-<section class="trust-section">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Why Your Website Matters</h2>
-
-<p>
-A professional website can make your brand easier to discover
-and easier for customers to trust.
-</p>
-
-</div>
-
-<div class="services-grid">
-
-<div class="card trust-card">
-
-<div class="icon">⭐</div>
-
-<h3>Professional Design</h3>
-
-<p>
-Your website should create a strong first impression
-when someone discovers your brand online.
-</p>
-
-</div>
-
-
-<div class="card trust-card">
-
-<div class="icon">🚀</div>
-
-<h3>Built For Growth</h3>
-
-<p>
-Modern layouts help you present your services,
-products and brand clearly.
-</p>
-
-</div>
-
-
-<div class="card trust-card">
-
-<div class="icon">🤝</div>
-
-<h3>Direct Support</h3>
-
-<p>
-Tell us your idea and we'll help you choose
-the right website solution.
-</p>
-
-</div>
 
 </div>
 
@@ -1902,60 +1374,109 @@ the right website solution.
 <div class="container">
 
 <div class="section-title">
-
 <h2>Let's Talk About Your Project</h2>
-
-<p>
-Have a website idea? Contact us directly and let's discuss it.
-</p>
-
+<p>Have a website idea? Let's discuss it.</p>
 </div>
 
 <div class="why-grid">
 
-<div class="why-item contact-card">
+<div class="why-item">
 
 <div class="icon">💬</div>
 
 <h3>WhatsApp</h3>
 
-<p>
-Get a quick response about your website project.
-</p>
+<p>Get in touch about your website project.</p>
 
-<a
-href="https://wa.me/917501911715"
+<a href="https://wa.me/917501911715"
 target="_blank"
 class="btn btn-primary"
 style="margin-top:15px;">
-
 Chat on WhatsApp
-
 </a>
 
 </div>
 
+<div class="why-item">
 
-<div class="why-item contact-card">
+<div class="icon">🚀</div>
 
-<div class="icon">🌐</div>
+<h3>Start Project</h3>
 
-<h3>Start Your Project</h3>
+<p>Send your requirements using our project form.</p>
 
-<p>
-Fill out our project form and send us your requirements.
-</p>
-
-<a
-href="#order"
+<a href="#order"
 class="btn btn-outline"
 style="margin-top:15px;">
-
-Order a Website
-
+Order Website
 </a>
 
 </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRIVACY + TERMS -->
+
+<section class="legal" id="privacy">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Privacy & Terms</h2>
+<p>Important information for website visitors and customers.</p>
+</div>
+
+<div class="legal-box">
+
+<h3>Privacy Policy</h3>
+
+<p>
+When you submit the project form, the information you provide is used
+only to understand your website requirements and communicate with you
+about your project.
+</p>
+
+<h3>Information We Collect</h3>
+
+<p>
+Name, business or brand name, website requirements and information
+you voluntarily provide through the project enquiry form.
+</p>
+
+<h3>How We Use Information</h3>
+
+<p>
+Information is used for project communication, quotations,
+requirements and website development.
+</p>
+
+<h3>Terms of Service</h3>
+
+<p>
+Project scope, pricing, delivery requirements and revisions should
+be discussed and confirmed before work begins.
+</p>
+
+<h3>Payments</h3>
+
+<p>
+Payment terms will be communicated directly before project
+confirmation. Do not send payment to any person claiming to represent
+Shre Web Studio without confirming the project details directly.
+</p>
+
+<h3>Changes</h3>
+
+<p>
+Project requirements may affect pricing and delivery time.
+Any additional work outside the agreed scope should be discussed
+before implementation.
+</p>
 
 </div>
 
@@ -1970,7 +1491,7 @@ Order a Website
 
 <div class="container">
 
-<div class="cta-badge">
+<div class="badge">
 🚀 START TODAY
 </div>
 
@@ -1985,28 +1506,17 @@ brand or personal project.
 
 <div class="buttons">
 
-<a
-href="#order"
-class="btn btn-primary">
-
+<a href="#order" class="btn btn-primary">
 💻 Get Your Website
-
 </a>
 
-<a
-href="https://wa.me/917501911715"
+<a href="https://wa.me/917501911715"
 target="_blank"
 class="btn btn-outline">
-
 💬 Chat With Us
-
 </a>
 
 </div>
-
-<p class="cta-note">
-Affordable plans starting from ₹999
-</p>
 
 </div>
 
@@ -2034,6 +1544,7 @@ Professional Websites • Modern Design • Affordable Pricing
 <a href="#portfolio">Portfolio</a>
 <a href="#pricing">Pricing</a>
 <a href="#faq">FAQ</a>
+<a href="#privacy">Privacy & Terms</a>
 <a href="#contact">Contact</a>
 <a href="#order">Order</a>
 
@@ -2050,55 +1561,53 @@ Professional Websites • Modern Design • Affordable Pricing
 
 <!-- WHATSAPP -->
 
-<a
-href="https://wa.me/917501911715"
+<a href="https://wa.me/917501911715"
 class="whatsapp"
 target="_blank"
 aria-label="WhatsApp">
-
 💬
-
 </a>
 
-
-<!-- JAVASCRIPT -->
 
 <script>
 
 function selectPackage(packageName){
 
-    const packageField =
-    document.getElementById("package");
+const field=document.getElementById("package");
 
-    if(packageField){
+if(field){
+field.value=packageName;
+}
 
-        packageField.value = packageName;
+}
 
-    }
+
+function selectType(typeName){
+
+const field=document.getElementById("websiteType");
+
+if(field){
+field.value=typeName;
+}
 
 }
 
 
 function sendOrder(event){
 
-    event.preventDefault();
+event.preventDefault();
 
-    const name =
-    document.getElementById("customerName").value.trim();
+const name=document.getElementById("customerName").value.trim();
 
-    const business =
-    document.getElementById("businessName").value.trim();
+const business=document.getElementById("businessName").value.trim();
 
-    const website =
-    document.getElementById("websiteType").value;
+const website=document.getElementById("websiteType").value;
 
-    const packageName =
-    document.getElementById("package").value;
+const packageName=document.getElementById("package").value;
 
-    const requirement =
-    document.getElementById("requirement").value.trim();
+const requirement=document.getElementById("requirement").value.trim();
 
-    const message =
+const message=
 `🚀 NEW WEBSITE PROJECT
 
 👤 Name: ${name}
@@ -2114,30 +1623,23 @@ ${requirement}
 
 Please contact me regarding my website project.`;
 
-    const whatsappURL =
-    "https://wa.me/917501911715?text=" +
-    encodeURIComponent(message);
+const url=
+"https://wa.me/917501911715?text="+
+encodeURIComponent(message);
 
-    window.open(
-        whatsappURL,
-        "_blank"
-    );
-
-}
-
-
-function orderPackage(packageName){
-
-    selectPackage(packageName);
-
-    document.getElementById("order")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
+window.open(url,"_blank");
 
 }
 
 </script>
+
+
+<!-- ANALYTICS READY
+
+After creating Google Analytics,
+paste your Google Analytics tracking code here.
+
+-->
 
 </body>
 </html>
